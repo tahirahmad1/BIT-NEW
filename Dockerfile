@@ -6,5 +6,3 @@ ARG WITH_ALL_LOCALES="no"
 EXPOSE 8080 8443
 
 USER root
-ENTRYPOINT [ "/opt/bitnami/scripts/moodle/entrypoint.sh" ]
-CMD [ "/opt/bitnami/scripts/moodle/run.sh" ]
