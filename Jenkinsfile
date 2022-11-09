@@ -8,7 +8,7 @@ timestamps {
                 sh "docker build . -t frankfurtmoodle:stable"
             }
             stage("Run Docker image") {
-                sh "docker run -d -p 443:8443 frankfurtmoodle:stable"
+                sh "docker run -d -p 8083:8080 frankfurtmoodle:stable"
             }
             currentBuild.result = 'SUCCESS'
         } catch(ex) {
