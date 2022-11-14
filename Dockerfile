@@ -1,10 +1,14 @@
 FROM bitnami/moodle
 MAINTAINER Tahir
 
+ENV ALLOW_EMPTY_PASSWORD=yes
+ENV MARIADB_USER=bn_moodle
+ENV MARIADB_DATABASE=bitnami_moodle
+ENV MARIADB_CHARACTER_SET=utf8mb4
+ENV MARIADB_COLLATE=utf8mb4_unicode_ci
+
 ARG Extra_Locals "fr_FR.UTF-8 UTF-8, de_DE.UTF-8 UTF-8, it_IT.UTF-8 UTF-8, es_ES.UTF-8 UTF-8"
 
 EXPOSE 8080 8443
 
 USER root
-
-CMD [ "/opt/bitnami/scripts/moodle/run.sh" ]
