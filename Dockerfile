@@ -6,3 +6,4 @@ EXPOSE 8080 8443
 
 USER root
 
+CMD [ "/opt/bitnami/scripts/moodle/run.sh" ]
