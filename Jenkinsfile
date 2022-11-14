@@ -14,7 +14,13 @@ timestamps {
                 
                 sh "docker run -d -p 8083:8080 frankfurtmoodle:stable"
                
-            }
+            
+            stage("Build mariadb")
+                sh "docker pull  mariadb"
+                
+                sh "docker run -d --name mariadb"
+        }
+        
             currentBuild.result = 'SUCCESS'
         } catch(ex) {
             currentBuild.result = 'FAILURE'
