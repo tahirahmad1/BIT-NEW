@@ -13,7 +13,7 @@ timestamps {
                 
                 sh  "docker rm bitnamimoodle || true"
                 
-                sh "docker run -d -p 8080:8443 bitnamimoodle:stable"
+                sh "docker run -d -p 8443:8080 bitnamimoodle:stable"
                 
                
                
