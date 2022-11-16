@@ -5,7 +5,7 @@ timestamps {
                 git branch: 'main', url:"https://github.com/tahirahmad1/BIT-NEW.git"
             }
             stage("Build Docker image") {
-                sh "docker build . -t bitnamimoodle"
+                sh "docker build . -t bitnamimoodle || true"
             }
             stage("Run Docker image") {
             
