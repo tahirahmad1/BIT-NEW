@@ -13,7 +13,7 @@ timestamps {
                 
                 sh  "docker rm bitnamimoodle || true"
                 
-                sh "docker run -d --link=some-mariadb --name=bitnamimoodle -p 8083:8443 -e MOODLE_DATABASE_HOST=mariadb -e MOODLE_DATABASE_PORT_NUMBER=3306 -e MOODLE_DATABASE_USER=example-user -e MOODLE_DATABASE_PASSWORD=my_cool_secret -e MOODLE_DATABASE_NAME=fra --network=moodle bitnamimoodle:latest"
+                sh "docker run -d --link=some-mariadb --name=bitnamimoodle -p 8083:8443 -e MOODLE_DATABASE_HOST=mariadb -e MOODLE_DATABASE_PORT_NUMBER=3386 -e MOODLE_DATABASE_USER=root -e MOODLE_DATABASE_PASSWORD=secret -e MOODLE_DATABASE_NAME=fra --network=mariadb_default bitnamimoodle:latest"
                     
                
                
