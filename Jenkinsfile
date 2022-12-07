@@ -7,10 +7,6 @@ timestamps {
             stage("Build Docker image") {
                 sh "docker build . -t bitnamimoodle"
             }
-            stage('cardentials') {
-                environment {
-                    MOODLE_DATABASE_PASSWORD = credntials('MOODLE_DATABASE_PASSWORD')   
-                }    
             stage("Run Docker image") {
             
                 sh  "docker stop bitnamimoodle || true"
@@ -24,7 +20,7 @@ timestamps {
         }
         
             currentBuild.result = 'SUCCESS'
-          catch(ex) {
+        } catch(ex) {
             currentBuild.result = 'FAILURE'
         } finally {
             
