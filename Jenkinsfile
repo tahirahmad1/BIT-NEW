@@ -24,7 +24,7 @@ timestamps {
         }
         
             currentBuild.result = 'SUCCESS'
-        } catch(ex) {
+          catch(ex) {
             currentBuild.result = 'FAILURE'
         } finally {
             
