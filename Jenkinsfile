@@ -1,11 +1,6 @@
 timestamps {
     node (""){
         try {
-            stage('heko') {
-                environment {
-                    MOODLE_DATABASE_PASSWORD = credentials('testid')
-                }
-            }
             stage("Checkout code") {
                 git branch: 'main', url:"https://github.com/tahirahmad1/BIT-NEW.git"
             }
@@ -13,7 +8,10 @@ timestamps {
                 sh "docker build . -t bitnamimoodle"
             }
             stage("Run Docker image") {
-            
+                environment {
+                    MOODLE_DATABASE_PASSWORD =  credentials('testid')
+                }
+
                 sh  "docker stop bitnamimoodle || true"
                 
                 sh  "docker rm bitnamimoodle || true"
