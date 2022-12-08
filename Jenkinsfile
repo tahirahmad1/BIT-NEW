@@ -8,15 +8,15 @@ timestamps {
                 sh "docker build . -t bitnamimoodle"
             }
             stage("Run Docker image") {
-                environment {
-                    MOODLE_DATABASE_PASSWORD =  credentials('testid')
-                }
+#                environment {
+#                    MOODLE_DATABASE_PASSWORD =  credentials('testid')
+#                }
 
                 sh  "docker stop bitnamimoodle || true"
                 
                 sh  "docker rm bitnamimoodle || true"
                 
-                sh "docker run -d --name=bitnamimoodle -p 8083:8443 -e MOODLE_DATABASE_HOST=mariadb_db_1 -e MOODLE_DATABASE_PORT_NUMBER=3306 -e MOODLE_DATABASE_USER=moodle -e MOODLE_DATABASE_PASSWORD=moodle -e MOODLE_DATABASE_NAME=bitnamimoodle --network=moodle bitnamimoodle:latest"
+                sh "docker run -d --name=bitnamimoodle -p 8083:8443 -e MOODLE_DATABASE_HOST=mariadb_db_1 -e MOODLE_DATABASE_PORT_NUMBER=3306 -e MOODLE_DATABASE_USER=moodle -e MOODLE_DATABASE_PASSWORD=$My_Password -e MOODLE_DATABASE_NAME=bitnamimoodle --network=moodle bitnamimoodle:latest"
                     
                
                
