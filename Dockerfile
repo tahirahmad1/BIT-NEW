@@ -2,7 +2,7 @@ FROM bitnami/moodle
 MAINTAINER Tahir
 
 
-ARG EXTRA_LOCALS "fr_FR.UTF-8 UTF-8, de_DE.UTF-8 UTF-8"
+ARG EXTRA_LOCALS "de_DE.UTF-8 UTF-8"
 RUN echo $EXTRA LOCALES >> /etc/locale.gen && locale-gen
 
 EXPOSE 8083 8443
