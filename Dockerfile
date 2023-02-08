@@ -1,5 +1,5 @@
 FROM bitnami/moodle
-MAINTAINER Kai
+MAINTAINER Tahir
 
 
 ARG EXTRA_LOCALES "de_DE.UTF-8 UTF-8"
