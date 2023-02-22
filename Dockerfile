@@ -5,7 +5,7 @@ MAINTAINER Tahir
 #RUN curl https://moodle.org/plugins/block_deft -y /blocks
 #    unzip /blocks/blocks_deft
 RUN apt update && \
-    apt install wget 
+    apt install -y wget 
 #RUN wget https://download.moodle.org/download.php/langpack/3.8/de.zip -o /bitnami/moodle/lang
 #    unzip /bitnami/moodledata/lang/de.zip
     
