@@ -2,7 +2,7 @@ FROM bitnami/moodle
 MAINTAINER Tahir
 RUN apt -y update && apt install -y curl
 #RUN mkdir /blocks 
-RUN curl -y https://moodle.org/plugins/block_deft /blocks/
+RUN curl https://moodle.org/plugins/block_deft -y /blocks
     #unzip /blocks/blocks_deft
 #RUN apt-get update && \
 #    apt-get install wget && \ wget https://download.moodle.org/download.php/langpack/3.8/de.zip /bitnami/moodledata/lang/ && \
