@@ -1,7 +1,7 @@
 FROM bitnami/moodle
 MAINTAINER Tahir
 RUN apt -y update && apt install -y curl && \
-    curl -ssl -o -y /blocks/block_deft https://moodle.org/plugins/block_deft
+    curl -ssl -o -y /bitnami/moodle/blocks https://moodle.org/plugins/block_deft
 #RUN curl https://moodle.org/plugins/block_deft -y /blocks
     #unzip /blocks/blocks_deft
 #RUN apt-get update && \
