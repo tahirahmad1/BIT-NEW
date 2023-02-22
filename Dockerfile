@@ -1,7 +1,7 @@
 FROM bitnami/moodle
 MAINTAINER Tahir
-RUN apt update && \ apt install curl && \
-    mkdir -p /blocks && \ 
+RUN apt update && apt install curl && \
+    mkdir -p /blocks 
 #RUN curl https://moodle.org/plugins/block_deft /blocks/ && \
 #   unzip /blocks/blocks_deft
 #RUN apt-get update && \
