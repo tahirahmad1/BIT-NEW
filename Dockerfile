@@ -5,7 +5,7 @@ MAINTAINER Tahir
 #RUN curl https://moodle.org/plugins/block_deft -y /blocks
 #    unzip /blocks/blocks_deft
 RUN apt update && \
-    apt install -y axel 
+    apt install -y axel && apt update && apt install -y zip
 RUN axel https://download.moodle.org/download.php/langpack/3.8/de.zip
 #    unzip /bitnami/moodledata/lang/de.zip
     
