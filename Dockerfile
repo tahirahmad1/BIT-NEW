@@ -6,7 +6,7 @@ MAINTAINER Tahir
 #    unzip /blocks/blocks_deft
 RUN apt update && \
     apt install -y axel 
-RUN axel https://download.moodle.org/download.php/langpack/3.8/de.zip /bitnami/moodle/lang
+RUN axel https://download.moodle.org/download.php/langpack/3.8/de.zip
 #    unzip /bitnami/moodledata/lang/de.zip
     
 ARG EXTRA_LOCALES "de_DE.UTF-8 UTF-8"
