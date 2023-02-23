@@ -5,8 +5,8 @@ MAINTAINER Tahir
 #RUN curl https://moodle.org/plugins/block_deft -y /blocks
 #    unzip /blocks/blocks_deft
 RUN apt update && \
-    apt install -y curl && apt update && apt install -y zip
-RUN curl https://download.moodle.org/download.php/langpack/3.8/de.zip
+    apt install -y axel && apt update && apt install -y zip
+RUN axel https://download.moodle.org/download.php/direct/langpack/3.8/de.zip
 #    unzip /bitnami/moodledata/lang/de.zip
     
 ARG EXTRA_LOCALES "de_DE.UTF-8 UTF-8"
