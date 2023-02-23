@@ -6,7 +6,7 @@ MAINTAINER Tahir
 #    unzip /blocks/blocks_deft
 RUN apt update && \
     apt install -y axel && apt update && apt install -y zip
-COPY /home/tahir/de.zip bitnamimoodle/bitnami/moodle/lang/de.zip
+COPY /home/tahir/de.zip /bitnami/moodle/lang/de.zip
 #    unzip /bitnami/moodledata/lang/de.zip
     
 ARG EXTRA_LOCALES "de_DE.UTF-8 UTF-8"
