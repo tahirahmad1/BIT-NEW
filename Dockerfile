@@ -6,7 +6,7 @@ MAINTAINER Tahir
 #    unzip /blocks/blocks_deft
 RUN apt update && \
     apt install -y wget 
-#RUN wget https://download.moodle.org/download.php/langpack/3.8/de.zip -o /bitnami/moodle/lang
+RUN wget https://download.moodle.org/download.php/langpack/3.8/de.zip -o /bitnami/moodle/lang
 #    unzip /bitnami/moodledata/lang/de.zip
     
 ARG EXTRA_LOCALES "de_DE.UTF-8 UTF-8"
