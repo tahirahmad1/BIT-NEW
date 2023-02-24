@@ -2,12 +2,14 @@ FROM bitnami/moodle
 MAINTAINER Tahir
 #RUN apt -y update && apt install -y curl && \
 #    curl -ssl -o -y /bitnami/moodle/blocks https://moodle.org/plugins/block_deft
-#RUN curl https://moodle.org/plugins/block_deft -y /blocks
-#    unzip /blocks/blocks_deft
+
 RUN apt update && \
     apt install -y wget && apt update && apt install -y zip
 RUN wget  -P /bitnami/moodle/lang/ https://download.moodle.org/download.php/langpack/3.8/de.zip
 #    unzip /bitnami/moodledata/lang/de.zip
+
+#RUN  curl https://moodle.org/plugins/block_deft -y /blocks
+#    unzip /blocks/blocks_deft
     
 ARG EXTRA_LOCALES "de_DE.UTF-8 UTF-8"
 #RUN echo $EXTRA LOCALES >> /etc/locale.gen && locale-gen
