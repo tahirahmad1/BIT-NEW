@@ -5,8 +5,7 @@ MAINTAINER Tahir
 
 RUN apt update && \
     apt install -y wget && apt update && apt install -y zip
-RUN wget  -P /bitnami/moodle/lang https://download.moodle.org/download.php/direct/langpack/3.8/de.zip && \
-    unzip /bitnami/moodledata/lang/de.zip
+RUN wget  -P /bitnami/moodle/lang https://download.moodle.org/download.php/direct/langpack/3.8/de.zip
 
 RUN wget -P /bitnami/moodle/blocks https://moodle.org/plugins/block_deft
 #    unzip /blocks/blocks_deft
